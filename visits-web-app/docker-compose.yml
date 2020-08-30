@@ -1,0 +1,14 @@
+version: "3"
+
+# service is like a type of container
+services:
+  # create using redis image from Docker Hub
+  redis-server:
+    image: "redis"
+
+  # look in current directory and use Dockerfile there to build
+  node-app:
+    restart: always # restart policy
+    build: .
+    ports:
+      - "4001:8081"
