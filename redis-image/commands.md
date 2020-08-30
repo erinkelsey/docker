@@ -73,6 +73,7 @@ NOTE: Shut down container immediately, by sending SIGKILL. Container cannot do a
     $ docker exec -it <container_id> <command>
 
 -i flag -> attach out terminal STDIN/STDOUT/STDERR to the new running process
+
 -t flag -> make sure that text in and out of process is nicely formatted
 
 ### Opening up a Shell in Container
