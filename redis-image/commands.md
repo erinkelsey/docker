@@ -16,6 +16,7 @@ NOTE: version is usually latest; version is the actual tag, the rest is the proj
 
     $ docker run <container_id>
 
+OR
 
     $ docker run <image_name>
     $ docker run erinkelsey/redis
@@ -25,6 +26,16 @@ NOTE: if you don't specify the version, it will run the latest
 Override Default Startup Command:
 
     $ docker run <container_id> <command>
+
+### Run with Port Mapping
+
+    $ docker run -p <incoming_port>:<inside_port> <image_name>
+
+NOTE: incoming_port -> route income requests to this port on localhost/server to...
+
+inside_port -> ... this port inside the container
+
+The two ports DO NOT need to be the same
 
 ### List All Containers Currently Running on Your Machine
 
@@ -90,4 +101,9 @@ NOTE: This approach will start container without running any other process (i.e.
 
 Exit Shell:
 
-    CMD-D
+    CTRL-D
+
+### Alpine Images
+
+- Images that are as small and compact as possible
+- Many popular repositories are going to offer Alpine versions of their image on Docker Hub
